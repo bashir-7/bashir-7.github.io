@@ -1,12 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 body {
-    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
     color: #f8fafc;
     min-height: 100vh;
     display: flex;
@@ -23,13 +16,13 @@ body {
     border-radius: 20px;
     padding: 40px 30px;
     width: 100%;
-    max-width: 750px; /* زيادة العرض لاستيعاب الخط الكبير */
+    max-width: 750px;
     text-align: center;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
 .header-title {
-    font-size: 2.2rem; /* تكبير عنوان المركز */
+    font-size: 2.2rem;
     font-weight: 700;
     color: #38bdf8;
     margin-bottom: 25px;
@@ -52,14 +45,14 @@ body {
 }
 
 .status-message {
-    font-size: 2rem; /* تم تكبير الخط هنا بشكل ممتاز للشاشات الكبيرة (حوالي 32px) */
-    font-weight: bold; /* جعل الخط عريضاً وواضحاً */
+    font-size: 2rem;
+    font-weight: bold;
     color: #f8fafc;
     line-height: 1.6;
 }
 
 .loader {
-    width: 60px; /* تكبير دائر التحميل لتتناسب مع الخط الجديد */
+    width: 60px;
     height: 60px;
     border: 6px solid #1e293b;
     border-bottom-color: #38bdf8;

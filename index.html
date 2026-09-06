@@ -4,78 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مركز بشير لصيانة وتعديل الأجهزة الإلكترونية</title>
-    
+    <link rel="stylesheet" href="style.css">
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        }
-
-        body {
-            background-color: #0088b6;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #ffffff;
-        }
-
-        .container {
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        /* تنسيق شريط التقدم */
+        .progress-box {
             width: 100%;
+            max-width: 450px;
+            height: 14px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
         }
 
-        .status-card {
-            background-color: #0f2738;
-            border-radius: 16px;
-            padding: 40px 30px;
-            width: 100%;
-            max-width: 650px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            gap: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .status-message {
-            font-size: 1.25rem;
-            font-weight: 600;
-            line-height: 1.6;
-            color: #ffffff;
-        }
-
-        .loader {
-            width: 48px;
-            height: 48px;
-            border: 4px solid rgba(255, 255, 255, 0.15);
-            border-top-color: #38bdf8;
-            border-radius: 50%;
-            animation: spin 1s infinite linear;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #0088b6, #38bdf8);
+            border-radius: 10px;
+            transition: width 0.3s ease;
         }
     </style>
 </head>
 <body>
-
-<div class="container">
-    <div class="status-card">
-        <span class="loader"></span>
-        <h2 id="msgs" class="status-message">جارٍ تحميل GoldHEN... يُرجى الانتظار</h2>
-    </div>
-</div>
 
 <script>
 var uaFull = navigator.userAgent;
@@ -146,6 +98,17 @@ if (!isPS4) {
     }
 }
 </script>
+
+<div class="container">
+    <div class="status-card">
+        <span class="loader"></span>
+        <h2 id="msgs" class="status-message">جارٍ تحميل GoldHEN... يُرجى الانتظار</h2>
+        
+        <div class="progress-box">
+            <div id="bar" class="progress-bar"></div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

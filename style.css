@@ -23,13 +23,13 @@ body {
     border-radius: 20px;
     padding: 40px 30px;
     width: 100%;
-    max-width: 650px;
+    max-width: 750px; /* زيادة العرض لاستيعاب الخط الكبير */
     text-align: center;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
 .header-title {
-    font-size: 1.8rem;
+    font-size: 2.2rem; /* تكبير عنوان المركز */
     font-weight: 700;
     color: #38bdf8;
     margin-bottom: 25px;
@@ -47,26 +47,27 @@ body {
     background: rgba(15, 23, 42, 0.6);
     border: 1px solid rgba(56, 189, 248, 0.2);
     border-radius: 12px;
-    padding: 25px 20px;
+    padding: 30px 25px;
     margin-top: 10px;
 }
 
 .status-message {
-    font-size: 1.2rem;
-    color: #e2e8f0;
+    font-size: 2rem; /* تم تكبير الخط هنا بشكل ممتاز للشاشات الكبيرة (حوالي 32px) */
+    font-weight: bold; /* جعل الخط عريضاً وواضحاً */
+    color: #f8fafc;
     line-height: 1.6;
 }
 
 .loader {
-    width: 48px;
-    height: 48px;
-    border: 5px solid #1e293b;
+    width: 60px; /* تكبير دائر التحميل لتتناسب مع الخط الجديد */
+    height: 60px;
+    border: 6px solid #1e293b;
     border-bottom-color: #38bdf8;
     border-radius: 50%;
     display: inline-block;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 @keyframes rotation {

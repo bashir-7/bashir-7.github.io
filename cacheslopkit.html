@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html manifest="slopkit.manifest" lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>مركز بشير لصيانة وتعديل الأجهزة الإلكترونية</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مركز بشير لصيانة وتعديل الأجهزة الإلكترونية</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <script>
-history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
-function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="تثبيت ذاكرة التخزين المؤقت دون اتصال بالإنترنت: " + Percent + "%";}
-function DisplayCacheProgress(){window.msgs.innerHTML="تم تثبيت ذاكرة التخزين المؤقت بنجاح ✔";setTimeout(function(){window.msgs.innerHTML="يرجى قطع الاتصال بالشبكة، إغلاق المتصفح، وإعادة تشغيله...";},1500);}
-window.applicationCache.addEventListener("progress",DLProgress,false);
-window.applicationCache.oncached=function(e){DisplayCacheProgress();};
-window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
-window.applicationCache.onerror=function(e){window.msgs.innerHTML="حدث خطأ أثناء تثبيت ذاكرة التخزين المؤقت! - امسح ذاكرة التخزين المؤقت وأعد فتح المتصفح ...";};
+history.replaceState(null, null, 'index.html');
+var histlength = history.length;
+history.go(-histlength);
+
+function DLProgress(e) {
+    Percent = (Math.round(e.loaded / e.total * 100));
+    window.msgs.innerHTML = "تثبيت ذاكرة التخزين المؤقت دون اتصال بالإنترنت: " + Percent + "%";
+}
+
+function DisplayCacheProgress() {
+    window.msgs.innerHTML = "تم تثبيت ذاكرة التخزين المؤقت بنجاح ✔";
+    setTimeout(function() {
+        window.msgs.innerHTML = "يرجى قطع الاتصال بالشبكة، إغلاق المتصفح، وإعادة تشغيله...";
+    }, 1500);
+}
+
+window.applicationCache.addEventListener("progress", DLProgress, false);
+window.applicationCache.oncached = function(e) { DisplayCacheProgress(); };
+window.applicationCache.onupdateready = function(e) { DisplayCacheProgress(); };
+window.applicationCache.onerror = function(e) { 
+    window.msgs.innerHTML = "حدث خطأ أثناء تثبيت ذاكرة التخزين المؤقت! - امسح ذاكرة التخزين المؤقت وأعد فتح المتصفح ..."; 
+};
 </script>
 
 <div class="container">
     <div class="status-card">
         <span class="loader"></span>
-  
-        <h2 id="msgs" class="status-message" style="font-size: 30px; font-weight: bold;">بدء تثبيت ذاكرة التخزين المؤقت...</h2>
+        <h2 id="msgs" class="status-message">بدء تثبيت ذاكرة التخزين المؤقت...</h2>
     </div>
 </div>
 

@@ -25,9 +25,7 @@ if (!isPS4) {
     });
 } else {
     if (window.applicationCache.status == '0') {
-        if (fwNum >= 7.00 && fwNum <= 8.52) {
-            window.location.replace("cache700.html");
-        } else if (fwNum >= 9.00 && fwNum <= 9.60) {
+        if (fwNum >= 9.00 && fwNum <= 9.60) {
             window.location.replace("cache900.html");
         } else if (fwNum >= 10.00 && fwNum <= 11.02) {
             window.location.replace("cachecss.html");
@@ -39,14 +37,7 @@ if (!isPS4) {
             });
         }
     } else {
-        if (fwNum >= 7.00 && fwNum <= 8.52) {
-            var script = document.createElement('script');
-            script.type = 'module';
-            script.src = "700/alert.js";
-            script.onerror = onScriptError;
-            document.head.appendChild(script);
-        }
-        else if (fwNum >= 9.00 && fwNum <= 9.60) {
+        if (fwNum >= 9.00 && fwNum <= 9.60) {
             var script = document.createElement('script');
             script.type = 'module';
             script.src = "900/alert.js";
@@ -78,6 +69,11 @@ if (!isPS4) {
             script.onerror = onScriptError;
             document.head.appendChild(script);
         }
+        else {
+            document.addEventListener("DOMContentLoaded", () => {
+                msgs.innerHTML = 'البرامج الثابتة غير المدعومة: <span style="color: #ef4444;">' + fwVersion + '</span>';
+            });
+        }
     }
 }
 </script>
@@ -85,8 +81,7 @@ if (!isPS4) {
 <div class="container">
     <div class="status-card">
         <span class="loader"></span>
-   
-        <h2 id="msgs" class="status-message" style="font-size: 32px; font-weight: bold;">جارٍ تحميل GoldHEN... يُرجى الانتظار</h2>
+        <h2 id="msgs" class="status-message">جارٍ تحميل GoldHEN... يُرجى الانتظار</h2>
     </div>
 </div>
 

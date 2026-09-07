@@ -53,8 +53,9 @@
             color: #ffffff;
         }
 
+        /* الدائرة تكون ظاهرة هنا */
         .loader {
-            display: none;
+            display: block;
             width: 48px;
             height: 48px;
             border: 4px solid rgba(255, 255, 255, 0.15);
@@ -68,9 +69,11 @@
             100% { transform: rotate(360deg); }
         }
 
-        /* كود إخفاء شريط التعبئة الذي أسفل النص */
-        .progress-bar, #progress, progress, [class*="progress"], [id*="progress"], [class*="bar"] {
+        /* إخفاء شريط/خط التعبئة المباشر والرمزي نهائيًا */
+        hr, progress, .progress-bar, #progress-bar, [class*="progress"], [id*="progress"] {
             display: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
         }
     </style>
 </head>
@@ -87,18 +90,12 @@ function onScriptError() {
     msgs.innerHTML = "عذراً، امسح بيانات المتصفح وأعد تثبيت ذاكرة التخزين المؤقت ...";
 }
 
-function showLoader() {
-    var loader = document.getElementById("loader");
-    if (loader) loader.style.display = "block";
-}
-
 if (!isPS4) {
     document.addEventListener("DOMContentLoaded", () => {
         msgs.innerHTML = "مخصص فقط لأجهزة PS4 بإصدارات البرامج الثابتة من 9.00 إلى 13.00";
     });
 } else {
     if (window.applicationCache.status == '0') {
-        showLoader();
         if (fwNum >= 9.00 && fwNum <= 9.60) {
             window.location.replace("cache900.html");
         } else if (fwNum >= 10.00 && fwNum <= 11.02) {
@@ -154,7 +151,7 @@ if (!isPS4) {
 
 <div class="container">
     <div class="status-card">
-        <span id="loader" class="loader"></span>
+        <span class="loader"></span>
         <h2 id="msgs" class="status-message">تم تحميل GoldHEN بالفعل _ تحياتي_ مركز بشير _</h2>
     </div>
 </div>

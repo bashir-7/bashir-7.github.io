@@ -74,7 +74,6 @@ body {
     animation: rotation 1s linear infinite;
 }
 
-/* تنسيق شريط التقدم */
 .progress-box {
     width: 100%;
     max-width: 500px;

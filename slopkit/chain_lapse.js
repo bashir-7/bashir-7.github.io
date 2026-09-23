@@ -36,7 +36,7 @@ const lines = [];
 function hostOk() {
     var m = document.getElementById("msgs");
     if (m) {
-        m.innerHTML = "تم تحميل GoldHEN v2.4b18.12 بنجاح .تحياتي، بشير للإلكترونيات... ...";
+        m.innerHTML = "تم تحميل... GoldHEN ... بنجاح .تحياتي، بشير للإلكترونيات";
     }
 }
 

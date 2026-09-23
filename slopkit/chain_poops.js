@@ -41,7 +41,7 @@ const STOP_BEFORE_DOUBLE = params.get("stop") === "beforedouble";
 function hostOk() {
     var m = document.getElementById("msgs");
     if (m) {
-        m.innerHTML = "تم تحميل GoldHEN v2.4b18.12 بنجاح .تحياتي، بشير للإلكترونيات ...";
+        m.innerHTML = "تم تحميل ... GoldHEN ...بنجاح .تحياتي، بشير للإلكترونيات ...";
     }
 }
 
@@ -455,7 +455,7 @@ let payloadRunning = false;
                 mark("ALREADY-ROOT", "getuid=" + uid0 + " setuid(0)=" + su0);
                 var m = document.getElementById("msgs");
                 if (m) {
-                    m.innerHTML = "تم تحميل GoldHEN بالفعل .تحياتي، بشير للإلكترونيات ...";
+                    m.innerHTML = "تم تحميل... GoldHEN ...بالفعل .تحياتي، بشير للإلكترونيات ...";
                 }
                 return;
             }

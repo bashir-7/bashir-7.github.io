@@ -53,7 +53,7 @@ async function doJb() {
     }
 
     if (fn.setuid.invoke(0) !== -1) {
-      msgs.innerHTML = "تم تحميل GoldHEN بالفعل .تحياتي، بشير للإلكترونيات ...";
+      msgs.innerHTML = "تم تحميل ...GoldHEN ...بالفعل .تحياتي، بشير للإلكترونيات ...";
       return;
     }
 
@@ -111,7 +111,7 @@ async function doJb() {
       load_bin(bin_u8);
     }
 
-    msgs.innerHTML = "تم تحميل GoldHEN v2.4b18.12 بنجاح .تحياتي، بشير للإلكترونيات ...";
+    msgs.innerHTML = "تم تحميل... GoldHEN ...بنجاح .تحياتي، بشير للإلكترونيات  ...";
     logger.info("===END===");
   } catch (e) {
     msgs.innerHTML = "فشل التحميل للأسف! أعد تشغيل جهازك ...";

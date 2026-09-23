@@ -676,7 +676,7 @@ function makeRpc(worker) {
                 mark("ALREADY-ROOT", "getuid=" + uid0 + " setuid(0)=" + su0);
                 var m = document.getElementById("msgs");
                 if (m) {
-                    m.innerHTML = "تم تحميل GoldHEN بالفعل .تحياتي، بشير للإلكترونيات ...";
+                    m.innerHTML = "تم تحميل... GoldHEN ...بالفعل .تحياتي، بشير للإلكترونيات ...";
                 }
                 return;
             }

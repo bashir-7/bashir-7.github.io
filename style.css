@@ -99,7 +99,7 @@ body {
     unicode-bidi: plaintext;
     overflow: hidden;
 
-    /* وضع المحتوى في منتصف الصفحة */
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -111,7 +111,7 @@ body {
     unicode-bidi: plaintext;
     text-align: center;
 
-    /* إطار منبثق وبارز */
+   
     display: table;
     width: fit-content;
     max-width: 92%;
@@ -119,7 +119,7 @@ body {
     margin: 0 auto;
     padding: 18px 36px;
 
-    /* طبقة زجاجية داكنة */
+  
     background:
         linear-gradient(
             145deg,
@@ -127,11 +127,11 @@ body {
             rgba(0, 55, 105, 0.78)
         );
 
-    /* حافة داخلية وخارجية لإظهار البروز */
+   
     border: 2px solid rgba(255, 255, 255, 0.42);
     border-radius: 18px;
 
-    /* بروز واضح عن الخلفية */
+   
     box-shadow:
         0 0 0 1px rgba(0, 145, 255, 0.35),
         inset 0 1px 0 rgba(255, 255, 255, 0.20),
@@ -147,7 +147,7 @@ body {
         0 2px 5px rgba(0, 0, 0, 0.95),
         0 0 8px rgba(0, 0, 0, 0.45);
 
-    /* حركة خفيفة عند المرور */
+   
     transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 

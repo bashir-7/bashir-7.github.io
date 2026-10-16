@@ -24,7 +24,7 @@ window.applicationCache.onerror=function(e){window.msgs.innerHTML="خطأ في �
 </div>
 
 <script>
-// تلوين رسائل الحالة تلقائيًا دون التأثير في وظائف التشغيل.
+
 (function () {
     var message = document.getElementById("msgs");
     if (!message) return;
@@ -32,7 +32,7 @@ window.applicationCache.onerror=function(e){window.msgs.innerHTML="خطأ في �
     function updateMessageColor() {
         var text = (message.textContent || "").trim();
         message.classList.remove("msg-success", "msg-failure");
-        // إزالة أي لون قديم ضُبط مباشرة من ملفات التشغيل.
+     
         message.style.color = "";
 
         if (/فشل|تعذر|خطأ|غير مدعوم|مخصصة فقط|FAILED|ERROR|UNSUPPORTED|TIMEOUT|MISMATCH|ABORTED|REBOOT|NOT-FOUND/i.test(text)) {

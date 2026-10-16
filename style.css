@@ -62,7 +62,7 @@ hr {
   background: linear-gradient(90deg, transparent, rgba(53,234,255,.85), transparent);
   box-shadow: 0 0 8px rgba(53,234,255,.45);
 }
-/* لون الرسائل يتغير تلقائيًا حسب النجاح أو الفشل */
+
 #msgs.msg-success {
   color: #45f28a !important;
   border-color: rgba(69, 242, 138, .78);
@@ -96,7 +96,6 @@ hr {
   #msgs { margin-top: 42px !important; padding: 18px 12px; }
 }
 
-/* تذييل الإصدارات في الموضع المحدد أسفل واجهة الصفحة */
 .footer {
   position: fixed;
   left: 50%;
